@@ -42,7 +42,7 @@ For reference, a truncated structure looks like:
 
 ## Codex session archives
 
-Every `codex exec` invocation stores a JSONL transcript under `~/.codex/session/<Year>/<Month>/<Day>/`. The backend exposes endpoints to list and download these artifacts so that operators can audit or re-use model outputs. Ensure the application container has read access to these directories.
+Every `codex exec` invocation stores a JSONL transcript under `~/.codex/sessions/<Year>/<Month>/<Day>/` (recent CLI builds use the plural `sessions`; older ones may still use `session/`). The backend exposes endpoints to list and download these artifacts so that operators can audit or re-use model outputs. Ensure the application container has read access to these directories.
 
 ## Development checklist
 

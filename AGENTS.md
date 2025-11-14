@@ -20,7 +20,7 @@ codex exec --model gpt-5 --json --sandbox read-only --skip-git-repo-check "<Ques
   - 各戦略ごとの結果レポートでは、ペルソナ年代別の平均評価、分布、相関・KS距離などの統計指標をグラフ化し、画像またはPDFでダウンロードできるようにする。
   - ペルソナ（年代・性別等）を管理する機能を実装する。
   - マーケティング用途での有効性を測定するため、キャンペーン別・施策別の比較やA/B指標との携を考慮したデータスキーマと可視化を用意する。
-  - Codex CLIのセッションログ（`~/.codex/session/<Year>/<Month>/<Day>/*.jsonl`）を一覧化・ダウンロードできるAPIを実装し、UIから取得できるようにする。
+  - Codex CLIのセッションログ（現行CLIは`~/.codex/sessions/<Year>/<Month>/<Day>/*.jsonl`、旧版は`session/`ディレクトリ）を一覧化・ダウンロードできるAPIを実装し、UIから取得できるようにする。
 
 # チェックリスト
 - [ ] Codex CLIのセットアップと接続確認

@@ -38,8 +38,20 @@ def ensure_codex_auth_file() -> bool:
     return True
 
 
+def codex_sessions_root() -> Path:
+    base = Path.home() / ".codex"
+    preferred = base / "sessions"
+    legacy = base / "session"
+
+    if preferred.exists():
+        return preferred
+    if legacy.exists():
+        return legacy
+    return preferred
+
+
 def codex_session_dir(year: int, month: int, day: int) -> Path:
-    return Path.home() / ".codex" / "session" / f"{year:04d}" / f"{month:02d}" / f"{day:02d}"
+    return codex_sessions_root() / f"{year:04d}" / f"{month:02d}" / f"{day:02d}"
 
 
 @app.on_event("startup")
